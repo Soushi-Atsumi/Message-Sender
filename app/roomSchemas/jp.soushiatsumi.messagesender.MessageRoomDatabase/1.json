@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "ae16203a498a6e84bdffda8089df27b2",
+    "entities": [
+      {
+        "tableName": "Message",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`addressTo` TEXT NOT NULL, `addressCC` TEXT NOT NULL, `addressBCC` TEXT NOT NULL, `subject` TEXT NOT NULL, `body` TEXT NOT NULL, `index` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "addressTo",
+            "columnName": "addressTo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addressCC",
+            "columnName": "addressCC",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addressBCC",
+            "columnName": "addressBCC",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subject",
+            "columnName": "subject",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body",
+            "columnName": "body",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "index",
+            "columnName": "index",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "index"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Message_addressTo_addressCC_addressBCC_subject_body",
+            "unique": true,
+            "columnNames": [
+              "addressTo",
+              "addressCC",
+              "addressBCC",
+              "subject",
+              "body"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Message_addressTo_addressCC_addressBCC_subject_body` ON `${TABLE_NAME}` (`addressTo`, `addressCC`, `addressBCC`, `subject`, `body`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ae16203a498a6e84bdffda8089df27b2')"
+    ]
+  }
+}
