@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ MIT License
+  ~
+  ~ Copyright 2022 Soushi Atsumi
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+    <string name="BCC_colon">BCC:</string>
+    <string name="CC_colon">CC:</string>
+    <string name="about_this_app">このアプリについて</string>
+    <string name="add_message">メッセージを追加する</string>
+    <string name="address">アドレス</string>
+    <string name="address_BCC">アドレス（BCC）</string>
+    <string name="address_CC">アドレス（CC）</string>
+    <string name="address_To">アドレス（To）</string>
+    <string name="always_choose_app">常にアプリを選択する</string>
+    <string name="app_icon">アプリアイコン</string>
+    <string name="app_name">Message Sender</string>
+    <string name="are_you_sure">よろしいですか？</string>
+    <string name="behavior">挙動</string>
+    <string name="body">本文</string>
+    <string name="cannot_access_the_clipboard">クリップボードにアクセスできません。</string>
+    <string name="choose_BCC">選択（BCC）</string>
+    <string name="choose_CC">選択（CC）</string>
+    <string name="choose_To">選択（To）</string>
+    <string name="close_without_saving">保存せずに閉じますか？</string>
+    <string name="copy_address">アドレスをコピー</string>
+    <string name="copy_body">本文をコピー</string>
+    <string name="copy_subject">件名をコピー</string>
+    <string name="could_not_delete_existing_data">既存のデータを削除できませんでした。</string>
+    <string name="delete">削除</string>
+    <string name="delete_all">全て削除</string>
+    <string name="display">表示</string>
+    <string name="done">完了</string>
+    <string name="duplicate">複製</string>
+    <string name="edit">編集</string>
+    <string name="edit_message">メッセージを編集する</string>
+    <string name="failed_to_read">読み込み失敗</string>
+    <string name="fill_in_one_field_at_least">少なくとも一つの欄を埋めてください。</string>
+    <string name="hide_empty_BCC">空のBCCを隠す</string>
+    <string name="hide_empty_CC">空のCCを隠す</string>
+    <string name="hide_empty_body">空の本文を隠す</string>
+    <string name="hide_empty_subject">空の件名を隠す</string>
+    <string name="hide_empty_to">空のToを隠す</string>
+    <string name="input_a_body">本文を入力</string>
+    <string name="input_a_title">タイトルを入力</string>
+    <string name="it_has_not_been_able_to_be_added">追加できませんでした。</string>
+    <string name="list_of_messages">メッセージの一覧</string>
+    <string name="no">いいえ</string>
+    <string name="no_addresses_BCC">アドレス無し(BCC)</string>
+    <string name="no_addresses_CC">アドレス無し(CC)</string>
+    <string name="no_addresses_To">アドレス無し(To)</string>
+    <string name="no_body">本文無し</string>
+    <string name="no_subject">件名無し</string>
+    <string name="none">なし</string>
+    <string name="order">順序</string>
+    <string name="order_by">順序基準</string>
+    <string name="order_descending">降順</string>
+    <string name="preferences">設定</string>
+    <string name="reset">初期化</string>
+    <string name="share_address">アドレスを共有</string>
+    <string name="share_body">本文を共有</string>
+    <string name="share_subject">件名を共有</string>
+    <string name="this_address_is_not_a_valid_format_of_a_mail">このアドレスは正しいメールアドレスの形式ではありません。</string>
+    <string name="this_address_is_not_a_valid_format_of_a_mail_or_a_valid_format_of_a_phone_number">このアドレスは正しいメールアドレスまたは電話番号の形式ではありません。</string>
+    <string name="this_combination_has_already_been_added">この組み合わせは既に追加されています。</string>
+    <string name="this_device_denied_reading">この機器が読み込みを拒否しました。</string>
+    <string name="title">件名</string>
+    <string name="to_colon">To:</string>
+    <string name="version">バージョン</string>
+    <string name="yes">はい</string>
+</resources>

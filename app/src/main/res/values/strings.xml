@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ MIT License
+  ~
+  ~ Copyright 2022 Soushi Atsumi
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+    <string name="BCC_colon">BCC:</string>
+    <string name="CC_colon">CC:</string>
+    <string name="about_this_app">About This App</string>
+    <string name="add_message">Add Message</string>
+    <string name="address">Address</string>
+    <string name="address_BCC">Address(BCC)</string>
+    <string name="address_CC">Address(CC)</string>
+    <string name="address_To">Address(To)</string>
+    <string name="always_choose_app">Always choose an app</string>
+    <string name="app_icon">App Icon</string>
+    <string name="app_name">Message Sender</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="behavior">Behavior</string>
+    <string name="body">body</string>
+    <string name="cannot_access_the_clipboard">Cannot access the clipboard.</string>
+    <string name="choose_BCC">Choose(BCC)</string>
+    <string name="choose_CC">Choose(CC)</string>
+    <string name="choose_To">Choose(To)</string>
+    <string name="close_without_saving">Close without saving?</string>
+    <string name="copy_address">Copy Address</string>
+    <string name="copy_body">Copy Body</string>
+    <string name="copy_subject">Copy Subject</string>
+    <string name="copyright" translatable="false">© 2022 Soushi Atsumi.</string>
+    <string name="could_not_delete_existing_data">Could not delete existing data.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete all</string>
+    <string name="display">Display</string>
+    <string name="done">done</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="edit">Edit</string>
+    <string name="edit_message">Edit Message</string>
+    <string name="failed_to_read">Failed to read</string>
+    <string name="fill_in_one_field_at_least">Fill in one field at least.</string>
+    <string name="hide_empty_BCC">Hide empty BCC</string>
+    <string name="hide_empty_CC">Hide empty CC</string>
+    <string name="hide_empty_body">Hide empty Body</string>
+    <string name="hide_empty_subject">Hide empty subject</string>
+    <string name="hide_empty_to">Hide empty To</string>
+    <string name="input_a_body">Input a body</string>
+    <string name="input_a_title">Input a title</string>
+    <string name="it_has_not_been_able_to_be_added">It has not been able to be added.</string>
+    <string name="link_github" translatable="false">https://github.com/Soushi-Atsumi/Message-Sender</string>
+    <string name="list_of_messages">listOfMessages</string>
+    <string name="no">no</string>
+    <string name="no_addresses_BCC">No Addresses(BCC)</string>
+    <string name="no_addresses_CC">No Addresses(CC)</string>
+    <string name="no_addresses_To">No Addresses(To)</string>
+    <string name="no_body">No body</string>
+    <string name="no_subject">No Subject</string>
+    <string name="none">none</string>
+    <string name="order">Order</string>
+    <string name="order_by">Order by</string>
+    <string name="order_descending">Order descending</string>
+    <string name="preferences">Preferences</string>
+    <string name="project_link_github" translatable="false"><a href="https://github.com/">GitHub</a></string>
+    <string name="reset">Reset</string>
+    <string name="share_address">Share Address</string>
+    <string name="share_body">Share Body</string>
+    <string name="share_subject">Share Subject</string>
+    <string name="this_address_is_not_a_valid_format_of_a_mail">This address is not a valid format of a mail.</string>
+    <string name="this_address_is_not_a_valid_format_of_a_mail_or_a_valid_format_of_a_phone_number">This address is not a valid format of a mail or a valid format of a phone number.</string>
+    <string name="this_combination_has_already_been_added">This combination has already been added.</string>
+    <string name="this_device_denied_reading">This device denied reading.</string>
+    <string name="title">Title</string>
+    <string name="to_colon">To:</string>
+    <string name="version">Version</string>
+    <string name="yes">yes</string>
+</resources>

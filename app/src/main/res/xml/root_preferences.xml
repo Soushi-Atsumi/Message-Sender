@@ -1,0 +1,68 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright 2022 Soushi Atsumi
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/display">
+        <SwitchPreferenceCompat
+            app:key="@string/hide_empty_to"
+            app:title="@string/hide_empty_to" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/hide_empty_CC"
+            app:title="@string/hide_empty_CC" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/hide_empty_BCC"
+            app:title="@string/hide_empty_BCC" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/hide_empty_subject"
+            app:title="@string/hide_empty_subject" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/hide_empty_body"
+            app:title="@string/hide_empty_body" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/behavior">
+        <SwitchPreferenceCompat
+            app:key="@string/always_choose_app"
+            app:title="@string/always_choose_app" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/order">
+        <ListPreference
+            app:defaultValue="@string/none"
+            app:entries="@array/orderType"
+            app:entryValues="@array/orderType"
+            app:key="@string/order_by"
+            app:summary="%s"
+            app:title="@string/order_by" />
+        <SwitchPreferenceCompat
+            app:key="@string/order_descending"
+            app:title="@string/order_descending" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
