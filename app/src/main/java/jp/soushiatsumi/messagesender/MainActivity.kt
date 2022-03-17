@@ -27,15 +27,18 @@ package jp.soushiatsumi.messagesender
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.sqlite.db.SimpleSQLiteQuery
@@ -46,6 +49,7 @@ import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private var appIconDrawable: Drawable? = null
     val addOrEditOrDuplicateMessageActivityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         refreshMessageRecyclerView(this)
     }
@@ -89,8 +93,10 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.aboutItem -> {
-                AlertDialog.Builder(this).setView(R.layout.about_this_app).show().findViewById<TextView>(R.id.versionNameTextView)!!.text =
-                    "${getString(R.string.version)}: ${BuildConfig.VERSION_NAME}"
+                appIconDrawable = appIconDrawable ?: ResourcesCompat.getDrawable(resources, R.drawable.icon, null)
+                val alertDialog = AlertDialog.Builder(this).setView(R.layout.about_this_app).show()
+                alertDialog.findViewById<TextView>(R.id.versionNameTextView)!!.text = "${getString(R.string.version)}: ${BuildConfig.VERSION_NAME}"
+                alertDialog.findViewById<ImageView>(R.id.appIconImageView)!!.setImageDrawable(appIconDrawable)
                 return true
             }
             R.id.preferencesItem -> {
