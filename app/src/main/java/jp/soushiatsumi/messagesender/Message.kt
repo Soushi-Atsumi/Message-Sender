@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,34 +31,34 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 // @Entity(primaryKeys = [MessageColumnName.addressTo, MessageColumnName.addressCC, MessageColumnName.addressBCC, MessageColumnName.subject, MessageColumnName.body, "index"])
-@Entity(indices = [Index(value = [MessageColumnName.addressTo, MessageColumnName.addressCC, MessageColumnName.addressBCC, MessageColumnName.subject, MessageColumnName.body], unique = true)])
+@Entity(indices = [Index(value = [MessageColumnName.ADDRESS_TO, MessageColumnName.ADDRESS_CC, MessageColumnName.ADDRESS_BCC, MessageColumnName.SUBJECT, MessageColumnName.BODY], unique = true)])
 data class Message(
-    @ColumnInfo(name = MessageColumnName.addressTo) val addressTo: String,
-    @ColumnInfo(name = MessageColumnName.addressCC) val addressCC: String,
-    @ColumnInfo(name = MessageColumnName.addressBCC) val addressBCC: String,
-    @ColumnInfo(name = MessageColumnName.subject) val subject: String,
-    @ColumnInfo(name = MessageColumnName.body) val body: String,
+    @ColumnInfo(name = MessageColumnName.ADDRESS_TO) val addressTo: String,
+    @ColumnInfo(name = MessageColumnName.ADDRESS_CC) val addressCC: String,
+    @ColumnInfo(name = MessageColumnName.ADDRESS_BCC) val addressBCC: String,
+    @ColumnInfo(name = MessageColumnName.SUBJECT) val subject: String,
+    @ColumnInfo(name = MessageColumnName.BODY) val body: String,
     // A name of this column is "`index`"
     @PrimaryKey(autoGenerate = true) val index: Int,
 )
 
 class MessageColumnName {
     companion object {
-        const val addressTo = "addressTo"
-        const val addressCC = "addressCC"
-        const val addressBCC = "addressBCC"
-        const val subject = "subject"
-        const val body = "body"
-        const val index = "`index`"
+        const val ADDRESS_TO = "addressTo"
+        const val ADDRESS_CC = "addressCC"
+        const val ADDRESS_BCC = "addressBCC"
+        const val SUBJECT = "subject"
+        const val BODY = "body"
+        const val INDEX = "`index`"
 
         fun valueToName(value: String, context: Context): String {
             return when (value) {
-                context.getString(R.string.none) -> index
-                context.getString(R.string.address_To) -> addressTo
-                context.getString(R.string.address_CC) -> addressCC
-                context.getString(R.string.address_BCC) -> addressBCC
-                context.getString(R.string.title) -> subject
-                context.getString(R.string.body) -> body
+                context.getString(R.string.none) -> INDEX
+                context.getString(R.string.address_To) -> ADDRESS_TO
+                context.getString(R.string.address_CC) -> ADDRESS_CC
+                context.getString(R.string.address_BCC) -> ADDRESS_BCC
+                context.getString(R.string.title) -> SUBJECT
+                context.getString(R.string.body) -> BODY
                 else -> throw Exception("${value::class.java.simpleName}($value) cannot be converted.")
             }
         }

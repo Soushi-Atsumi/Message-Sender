@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,13 +24,13 @@
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.9.25'
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -38,14 +38,13 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.google.devtools.ksp' version '1.9.25-1.0.20' apply false
+}
+
 allprojects {
-    buildDir = "Z:/${rootProject.name}/${project.name}"
     repositories {
         google()
         mavenCentral()
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }

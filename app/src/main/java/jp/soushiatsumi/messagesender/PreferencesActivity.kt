@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -50,7 +50,7 @@ class PreferencesActivity : AppCompatActivity() {
         }
     }
 
-    fun resetButtonOnClick(view: android.view.View) {
+    fun resetButtonOnClick(@Suppress("UNUSED_PARAMETER") view: android.view.View) {
         settingsFragment?.preferenceScreen?.preferenceManager?.sharedPreferences?.edit()?.clear()?.apply()
         finish()
         startActivity(intent)

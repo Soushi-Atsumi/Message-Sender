@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ MIT License
   ~
-  ~ Copyright 2022 Soushi Atsumi
+  ~ Copyright 2024 Soushi Atsumi
   ~
   ~ Permission is hereby granted, free of charge, to any person obtaining a copy
   ~ of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +46,6 @@
     <string name="copy_body">Copy Body</string>
     <string name="copy_subject">Copy Subject</string>
     <string name="copyright" translatable="false">© 2022 Soushi Atsumi.</string>
-    <string name="could_not_delete_existing_data">Could not delete existing data.</string>
     <string name="delete">Delete</string>
     <string name="delete_all">Delete all</string>
     <string name="display">Display</string>

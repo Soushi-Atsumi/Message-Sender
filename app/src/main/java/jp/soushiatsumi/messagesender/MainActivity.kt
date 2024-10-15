@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.deleteAllItem -> {
-                if (binding.messageRecyclerView.adapter?.itemCount ?: 0 > 0) {
+                if ((binding.messageRecyclerView.adapter?.itemCount ?: 0) > 0) {
                     AlertDialog.Builder(this).setTitle(getString(R.string.delete_all))
                         .setMessage(getString(R.string.are_you_sure)).apply {
                             setPositiveButton(R.string.yes) { _: DialogInterface, _: Int ->
@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         (binding.messageRecyclerView.adapter as MessageRecyclerViewAdapter).notifyDataSetChanged()
     }
 
-    fun addMessageFloatingActionButtonOnClick(view: View) {
+    fun addMessageFloatingActionButtonOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         addOrEditOrDuplicateMessageActivityResultLauncher.launch(Intent(this, AddMessageActivity::class.java))
     }
 
@@ -141,7 +141,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun githubLinkTextViewOnClick(view: View) {
+    fun githubLinkTextViewOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.link_github))))
     }
 }

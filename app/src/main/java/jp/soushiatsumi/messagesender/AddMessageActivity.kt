@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -151,8 +151,7 @@ class AddMessageActivity : AppCompatActivity() {
         // onBackPressed を呼び出すとボタン押下と同じ挙動になるので、コールバックを無効化しないと無限ループする
         backButtonCallback = onBackPressedDispatcher.addCallback(this) {
             if (isAllFieldsDefaultValue) {
-                isEnabled = false
-                onBackPressed()
+                finish()
             } else {
                 askClosing()
             }
@@ -223,7 +222,7 @@ class AddMessageActivity : AppCompatActivity() {
         }
     }
 
-    fun doneButtonOnClick(view: View) {
+    fun doneButtonOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         if (isAllFieldsEmpty) {
             AlertDialog.Builder(this).setMessage(getString(R.string.fill_in_one_field_at_least)).show()
             return
@@ -286,7 +285,7 @@ class AddMessageActivity : AppCompatActivity() {
         switchAlertingOfView(view, false)
     }
 
-    fun chooseAddressToButtonOnClick(view: View) {
+    fun chooseAddressToButtonOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         val contactsKindsTypeHashMap = hashMapOf(
             "Email" to ContactsContract.CommonDataKinds.Email.CONTENT_TYPE,
             "SMS" to ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE
@@ -301,12 +300,12 @@ class AddMessageActivity : AppCompatActivity() {
         }.show()
     }
 
-    fun chooseAddressCCButtonOnClick(view: View) {
+    fun chooseAddressCCButtonOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         val intent = Intent(Intent.ACTION_PICK).apply { type = ContactsContract.CommonDataKinds.Email.CONTENT_TYPE }
         choosingAddressCCActivityResultLauncher.launch(intent)
     }
 
-    fun chooseAddressBCCButtonOnClick(view: View) {
+    fun chooseAddressBCCButtonOnClick(@Suppress("UNUSED_PARAMETER") view: View) {
         val intent = Intent(Intent.ACTION_PICK).apply { type = ContactsContract.CommonDataKinds.Email.CONTENT_TYPE }
         choosingAddressBCCActivityResultLauncher.launch(intent)
     }
@@ -315,8 +314,7 @@ class AddMessageActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage(getString(R.string.close_without_saving)).apply {
                 setPositiveButton(R.string.yes) { _: DialogInterface, _: Int ->
-                    backButtonCallback.isEnabled = false
-                    onBackPressed()
+                    finish()
                 }
                 setNegativeButton(R.string.no) { _: DialogInterface, _: Int -> }
             }.show()

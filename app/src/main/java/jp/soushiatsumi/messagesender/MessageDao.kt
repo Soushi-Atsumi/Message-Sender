@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright 2022 Soushi Atsumi
+ * Copyright 2024 Soushi Atsumi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,12 @@
 
 package jp.soushiatsumi.messagesender
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.RawQuery
+import androidx.room.Update
 import androidx.sqlite.db.SupportSQLiteQuery
 
 @Dao
@@ -35,7 +40,7 @@ interface MessageDao {
         const val GET_ALL_WITH_ORDER_DESC_QUERY = "$GET_ALL_WITH_ORDER_QUERY DESC"
     }
 
-    @Query("$GET_ALL_QUERY ORDER BY ${MessageColumnName.index}")
+    @Query("$GET_ALL_QUERY ORDER BY ${MessageColumnName.INDEX}")
     fun getAll(): List<Message>
 
     // 動的クエリは RawQuery を使用する（ORDER BY :column_name は効果が無く無視される）
@@ -46,7 +51,7 @@ interface MessageDao {
     fun getAllWithOrderDesc(supportSQLiteQuery: SupportSQLiteQuery): List<Message>
 
     // 見つからないときは null (APIリファレンスにないけど)
-    @Query("SELECT * FROM message WHERE ${MessageColumnName.addressTo} = :addressTo AND ${MessageColumnName.addressCC} = :addressCC AND ${MessageColumnName.addressBCC} = :addressBCC AND ${MessageColumnName.subject} = :subject AND ${MessageColumnName.body} = :body")
+    @Query("SELECT * FROM message WHERE ${MessageColumnName.ADDRESS_TO} = :addressTo AND ${MessageColumnName.ADDRESS_CC} = :addressCC AND ${MessageColumnName.ADDRESS_BCC} = :addressBCC AND ${MessageColumnName.SUBJECT} = :subject AND ${MessageColumnName.BODY} = :body")
     fun get(addressTo: String, addressCC: String, addressBCC: String, subject: String, body: String): Message?
 
     @Update
